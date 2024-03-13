@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANICURE</title>
+    <link rel="stylesheet" type="text/css" href="./member.css">
+</head>
+<body>
+    <div class="frame">
+        <div class="left" id="Homepage" style="cursor: pointer;"></div>
+        <div class="right">
+            <div class="item"><a href="./Nailstyle-0.html">美甲款式</a></div>
+            <div class="item"><a href="./Storeguide.html">店家導覽</a></div>
+            <div class="item"><a href="./Appointmentform.html">預約表單</a></div>
+            <div class="item"><a href="./mproblem.html">常見問題</a></div>
+        </div>
+        <div class="right1">
+            <button class="item-right1"><a href="./member.html">登入 / 註冊</a></button>
+        </div>
+    </div>
+    <div class="title">
+        <div class="text">會員登入 / 註冊</div>
+    </div>
+
+    <div class="one">
+        <div class="login_page" id="login">
+            <div class="login">
+                <h3>登入 Login</h3>
+
+                <form>
+                    <div><label for="account">帳號：</label></div>
+                    <div><input type="email" name="account1" id="account1" required></div>
+                    <div><br></div>
+                    <div><label for="password">密碼：</label></div>
+                    <div><input type="password" name="password1" id="password1" required></div>
+
+                    <div><br></div>
+                    <div><button type="login" name="login" onclick="login1 ()">登入</button></div>
+                    <!-- <input type="submit" value="登入" class="submit" onclick="login1 ()" id="loginButton"> -->
+                </form>
+
+                <p onclick="show_hide()" style="cursor: pointer;">註冊帳號</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="two">
+        <div class="signup_page" id="signup">
+            <div class="signup">
+                <h3>註冊 Sign up</h3>
+
+                <form id="signupForm">
+                    <div><label for="account2">帳號：</label></div>
+                    <div><input type="email" id="account2" name="account2" required/></div>
+                    <div><br></div>
+                    <div><label for="password2">密碼：</label></div>
+                    <div><input type="password" name="password2" id="password2" required/></div>
+                    <div><br></div>
+                    <div><label for="password3">請再次輸入密碼：</label></div>
+                    <div><input type="password" name="password3" id="password3" required/></div>
+                    <div><br></div>
+                    <div><button type="submit" name="submit">註冊</button></div>
+                </form>
+
+                <p onclick="show_hide()" style="cursor: pointer;">登入會員</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer1">
+            <div class="footer1_pic"></div>
+        </div>
+        <div class="footer2">
+            <div>
+                <p>美甲預約平台</p>
+                <p>☏ 0900-000000</p>
+            </div>
+        </div>
+        <div class="footer3">
+            <div>
+                <p>✉ manicure@gmail.com</p>
+                <p>台中市南屯區公益路二段51號18樓</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        Homepage.onclick = function () {
+            window.location = "./Homepage.html";
+        }
+    </script>
+
+    <script>
+        function show_hide() {
+            var login = document.getElementById("login");
+            var signup = document.getElementById("signup");
+
+            if (login.style.display === "none") {
+                login.style.display = "block";
+            
+                document.getElementById("account1").value="";
+                document.getElementById("password1").value="";
+
+                signup.style.display = "none";
+            } else {
+                login.style.display = "none";
+                signup.style.display = "block";
+                signup.style.visibility = "visible";
+
+                document.getElementById("account2").value="";
+                document.getElementById("password2").value="";
+                document.getElementById("password3").value="";
+            }
+        }
+    </script>
+
+    <script>
+    const signupForm = document.getElementById("signupForm");
+    signupForm.addEventListener("submit", signupHandler);
+
+    function signupHandler(event) {
+
+        const password2 = document.querySelector("input[name=password2]");
+        const password3 = document.querySelector("input[name=password3]");
+        const account2 = document.querySelector("input[name=account2]");
+
+        if (password2.value === password3.value) {
+            alert("已成功註冊");
+
+            // 添加儲存資料
+            const account2Value = account2.value;
+            localStorage.setItem("account", account2Value);
+
+            // 在真實應用中，密碼應該在伺服器端進行加密存儲
+            const password2Value = password2.value;
+            localStorage.setItem("password", password2Value);
+        } else {
+            alert("密碼輸入不正確");
+        }
+    }
+
+        // 將資料在離開畫面後還存著
+        const oldAccountValue = localStorage.getItem("account");
+        account.value = oldAccountValue;
+
+        const oldPasswordValue = localStorage.getItem("password");
+        password.value = oldPasswordValue;
+
+        function login1() {
+            event.preventDefault(); // 阻止表單預設行為，避免頁面刷新
+
+            let account = document.getElementById("account1");
+            let password = document.getElementById("password1");
+            let accountList = localStorage.getItem("account");
+            let passwordList = localStorage.getItem("password");
+
+            if (account.value == accountList && password.value == passwordList) {
+                alert("登入成功!");
+                window.location.href = "./Homepage.html?account=" + account.value;
+                
+            } else {
+                alert("帳號或密碼錯誤!");
+            }
+
+        }
+        
+    </script>
+
+
+</body>
+</html>
