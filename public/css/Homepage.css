@@ -14,7 +14,7 @@ body {
   width: 22%;
   margin-left: 20px;
   margin-top: 10px;
-  background-image: url("../image/logoname.png");
+  background-image: url("/image/logoname.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -83,7 +83,7 @@ body {
 .bigpicture {
   width: 100%;
   height: 500px;
-  background-image: url("../image/01-HomePage.jpg");
+  background-image: url("/image/01-HomePage.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -112,7 +112,7 @@ body {
   border-radius: 20px;
   font-size: 20px;
   font-weight: bolder;
-  background-image: url("../image/mainmenu-1.jpg");
+  background-image: url("/image/mainmenu-1.jpg");
   background-size: cover;
   color: #8c736f;
 }
@@ -131,7 +131,7 @@ body {
   border-radius: 20px;
   font-size: 20px;
   font-weight: bolder;
-  background-image: url("../image/mainmenu-2.jpg");
+  background-image: url("/image/mainmenu-2.jpg");
   background-size: cover;
   color: #8c736f;
 }
@@ -150,7 +150,7 @@ body {
   border-radius: 20px;
   font-size: 20px;
   font-weight: bolder;
-  background-image: url("../image/mainmenu-3.jpg");
+  background-image: url("/image/mainmenu-3.jpg");
   background-size: cover;
   color: #8c736f;
 }
@@ -185,7 +185,7 @@ body {
   border-radius: 20px;
   font-size: 20px;
   font-weight: bolder;
-  background-image: url("../image/nailstyle-Maillard/02-han_nail.jpg");
+  background-image: url("/image/nailstyle-Maillard/02-han_nail.jpg");
   background-size: cover;
   color: #8c736f;
 }
@@ -199,7 +199,7 @@ body {
   border-radius: 20px;
   font-size: 20px;
   font-weight: bolder;
-  background-image: url("../image/nailstyle-Christmas/07-metea_.art.jpg");
+  background-image: url("/image/nailstyle-Christmas/07-metea_.art.jpg");
   background-size: cover;
   color: #8c736f;
 }
@@ -213,7 +213,7 @@ body {
   border-radius: 20px;
   font-size: 20px;
   font-weight: bolder;
-  background-image: url("../image/nailstyle-modeling/04-time_fans.studio.jpg");
+  background-image: url("/image/nailstyle-modeling/04-time_fans.studio.jpg");
   background-size: cover;
   color: #8c736f;
 }
@@ -227,7 +227,7 @@ body {
   border-radius: 20px;
   font-size: 20px;
   font-weight: bolder;
-  background-image: url("../image/nailstyle-monochrome/02-metea_.art.jpg");
+  background-image: url("/image/nailstyle-monochrome/02-metea_.art.jpg");
   background-size: cover;
   color: #8c736f;
 }
@@ -260,7 +260,7 @@ body {
 .footer1_pic {
   width: 200px;
   height: 50px;
-  background-image: url("../image/logoname.png");
+  background-image: url("/image/logoname.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
