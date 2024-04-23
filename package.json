@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "vue": "^3.4.24",
+    "vue-router": "^4.3.2"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "start": "nodemon app.js",
+    "build": "babel src/js -d public/js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@vue/cli-service": "^5.0.8",
+    "compression-webpack-plugin": "^11.1.0",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-hot-middleware": "^2.26.1"
+  }
+}
